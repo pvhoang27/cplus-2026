@@ -9,16 +9,14 @@ bool snt(long long n){
 }
 int main(){
 	int t ; cin >> t ;
+	
 	while(t--){
 		long long n ; cin >> n;
-		for(long long  i = 2 ; i * i  <= n; i++){
+		for(long long  i = 2 ; i  <= n; i++){
 			if(snt(i) && snt(n - i)) {
-				cout << i << " " << n - i ;
-				break
-			}
-			
-					
+				cout << i << " " << n - i  << endl;;
+				break;
+			}			
 		}
-		cout << endl;
 	}
 }
