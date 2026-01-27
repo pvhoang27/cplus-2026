@@ -8,10 +8,14 @@ bool check (int n){
 	return true;
 }
 int main(){
-	int a , b ; cin >> a >> b;
-	if(a > b) swap(a,b);
-	for (int i = a ; i <= b; i++){
-		if(check(i)) cout <<  i <<" ";
-	}
+	int t ; cin >> t ; 
+	while(t--){
+		int a , b ; cin >> a >> b;
+		if(a > b) swap(a,b);
+		for (int i = a ; i <= b; i++){
+			if(check(i)) cout <<  i <<" ";
+		}
 	cout << endl;
+	}
+	
 }
