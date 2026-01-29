@@ -21,6 +21,14 @@ public:
         mau /= g;
     }
 
+    friend PhanSo operator + (PhanSo a, PhanSo b) {
+        PhanSo res;
+        res.tu = a.tu * b.mau + b.tu * a.mau;
+        res.mau = a.mau * b.mau;
+        res.rutgon();
+        return res;
+    }
+
     friend ostream& operator << (ostream &out, PhanSo p) {
         out << p.tu << "/" << p.mau;
         return out;
@@ -28,10 +36,9 @@ public:
 };
 
 int main() {
-    PhanSo p(1,1);
-    cin >> p;
-    p.rutgon();
-    cout << p;
+    PhanSo p(1,1), q(1,1);
+    cin >> p >> q;
+    cout << p + q;
     return 0;
 }
 
