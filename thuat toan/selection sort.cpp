@@ -10,7 +10,7 @@ void ssort(int a[], int n){
 	}
 }
 int main(){
-	int n , a[100]; cin >> n;
+	int n , a[100]; cin >> n; // 5 3 4 2 1
 	for(int i = 0 ;  i < n ; i++) cin >> a[i];
 	ssort(a , n);
 	for(int i = 0 ; i < n; i++) cout << a[i] << " ";
